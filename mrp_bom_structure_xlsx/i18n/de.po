@@ -19,15 +19,21 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. module: mrp_bom_structure_xlsx
-#: code:addons/mrp_bom_structure_xlsx/report/bom_structure_xlsx.py:47
+#: code:addons/mrp_bom_structure_xlsx/report/bom_structure_xlsx.py:0
 #, python-format
 msgid "BOM Name"
 msgstr "SL-Name"
 
 #. module: mrp_bom_structure_xlsx
-#: code:addons/mrp_bom_structure_xlsx/report/bom_structure_xlsx.py:35
+#: code:addons/mrp_bom_structure_xlsx/report/bom_structure_xlsx.py:0
 #, python-format
 msgid "BOM Structure"
+msgstr "Struktur-SL"
+
+#. module: mrp_bom_structure_xlsx
+#: model:ir.model,name:mrp_bom_structure_xlsx.model_report_mrp_bom_structure_xlsx_bom_structure_xlsx
+#, fuzzy
+msgid "BOM Structure XLSX Report"
 msgstr "Struktur-SL"
 
 #. module: mrp_bom_structure_xlsx
@@ -51,42 +57,37 @@ msgid "Last Modified on"
 msgstr ""
 
 #. module: mrp_bom_structure_xlsx
-#: code:addons/mrp_bom_structure_xlsx/report/bom_structure_xlsx.py:48
+#: code:addons/mrp_bom_structure_xlsx/report/bom_structure_xlsx.py:0
 #, python-format
 msgid "Level"
 msgstr ""
 
 #. module: mrp_bom_structure_xlsx
-#: code:addons/mrp_bom_structure_xlsx/report/bom_structure_xlsx.py:50
+#: code:addons/mrp_bom_structure_xlsx/report/bom_structure_xlsx.py:0
 #, python-format
 msgid "Product Name"
 msgstr ""
 
 #. module: mrp_bom_structure_xlsx
-#: code:addons/mrp_bom_structure_xlsx/report/bom_structure_xlsx.py:49
+#: code:addons/mrp_bom_structure_xlsx/report/bom_structure_xlsx.py:0
 #, python-format
 msgid "Product Reference"
 msgstr ""
 
 #. module: mrp_bom_structure_xlsx
-#: code:addons/mrp_bom_structure_xlsx/report/bom_structure_xlsx.py:51
+#: code:addons/mrp_bom_structure_xlsx/report/bom_structure_xlsx.py:0
 #, python-format
 msgid "Quantity"
 msgstr "Menge"
 
 #. module: mrp_bom_structure_xlsx
-#: code:addons/mrp_bom_structure_xlsx/report/bom_structure_xlsx.py:53
+#: code:addons/mrp_bom_structure_xlsx/report/bom_structure_xlsx.py:0
 #, python-format
 msgid "Reference"
 msgstr ""
 
 #. module: mrp_bom_structure_xlsx
-#: code:addons/mrp_bom_structure_xlsx/report/bom_structure_xlsx.py:52
+#: code:addons/mrp_bom_structure_xlsx/report/bom_structure_xlsx.py:0
 #, python-format
 msgid "Unit of Measure"
-msgstr ""
-
-#. module: mrp_bom_structure_xlsx
-#: model:ir.model,name:mrp_bom_structure_xlsx.model_report_mrp_bom_structure_xlsx_bom_structure_xlsx
-msgid "report.mrp_bom_structure_xlsx.bom_structure_xlsx"
 msgstr ""
