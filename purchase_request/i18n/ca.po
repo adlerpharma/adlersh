@@ -22,21 +22,22 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. module: purchase_request
-#: code:addons/purchase_request/models/purchase_order.py:0
+#: code:addons/purchase_request/models/purchase_order.py:24
 #, python-format
 msgid "<li><b>%s</b>: Ordered quantity %s %s, Planned date %s</li>"
 msgstr ""
 
 #. module: purchase_request
-#: code:addons/purchase_request/models/purchase_order.py:0
-#: code:addons/purchase_request/models/purchase_request_allocation.py:0
-#: code:addons/purchase_request/models/stock_picking.py:0
+#: code:addons/purchase_request/models/purchase_order.py:188
+#: code:addons/purchase_request/models/purchase_request_allocation.py:86
+#: code:addons/purchase_request/models/stock_picking.py:24
 #, python-format
 msgid "<li><b>%s</b>: Received quantity %s %s</li>"
 msgstr ""
 
 #. module: purchase_request
-#: code:addons/purchase_request/models/stock_move_line.py:0
+#: code:addons/purchase_request/models/stock_move_line.py:20
+#: code:addons/purchase_request/models/stock_move_line.py:40
 #, python-format
 msgid "<li><b>%s</b>: Transferred quantity %s %s</li>"
 msgstr ""
@@ -48,23 +49,17 @@ msgstr ""
 
 #. module: purchase_request
 #: model_terms:ir.ui.view,arch_db:purchase_request.report_purchase_request
-msgid ""
-"<strong>Assigned to:</strong>\n"
-"                                <br/>"
+msgid "<strong>Assigned to:</strong><br/>"
 msgstr ""
 
 #. module: purchase_request
 #: model_terms:ir.ui.view,arch_db:purchase_request.report_purchase_request
-msgid ""
-"<strong>Creation Date:</strong>\n"
-"                                <br/>"
+msgid "<strong>Creation Date:</strong><br/>"
 msgstr ""
 
 #. module: purchase_request
 #: model_terms:ir.ui.view,arch_db:purchase_request.report_purchase_request
-msgid ""
-"<strong>Description:</strong>\n"
-"                                <br/>"
+msgid "<strong>Description:</strong><br/>"
 msgstr ""
 
 #. module: purchase_request
@@ -79,9 +74,7 @@ msgstr ""
 
 #. module: purchase_request
 #: model_terms:ir.ui.view,arch_db:purchase_request.report_purchase_request
-msgid ""
-"<strong>Picking Type:</strong>\n"
-"                                <br/>"
+msgid "<strong>Picking Type:</strong><br/>"
 msgstr ""
 
 #. module: purchase_request
@@ -96,9 +89,7 @@ msgstr ""
 
 #. module: purchase_request
 #: model_terms:ir.ui.view,arch_db:purchase_request.report_purchase_request
-msgid ""
-"<strong>Request Reference:</strong>\n"
-"                                <br/>"
+msgid "<strong>Request Reference:</strong><br/>"
 msgstr ""
 
 #. module: purchase_request
@@ -108,16 +99,12 @@ msgstr ""
 
 #. module: purchase_request
 #: model_terms:ir.ui.view,arch_db:purchase_request.report_purchase_request
-msgid ""
-"<strong>Requested by:</strong>\n"
-"                                <br/>"
+msgid "<strong>Requested by:</strong><br/>"
 msgstr ""
 
 #. module: purchase_request
 #: model_terms:ir.ui.view,arch_db:purchase_request.report_purchase_request
-msgid ""
-"<strong>Source:</strong>\n"
-"                                <br/>"
+msgid "<strong>Source:</strong><br/>"
 msgstr ""
 
 #. module: purchase_request
@@ -134,7 +121,7 @@ msgid ""
 msgstr ""
 
 #. module: purchase_request
-#: code:addons/purchase_request/models/stock_move.py:0
+#: code:addons/purchase_request/models/stock_move.py:53
 #, python-format
 msgid ""
 "A sale/manufacturing order that generated this purchase request has been "
@@ -154,12 +141,6 @@ msgid "Activities"
 msgstr ""
 
 #. module: purchase_request
-#: model:ir.model.fields,field_description:purchase_request.field_purchase_request__activity_exception_decoration
-#: model:ir.model.fields,field_description:purchase_request.field_purchase_request_line__activity_exception_decoration
-msgid "Activity Exception Decoration"
-msgstr ""
-
-#. module: purchase_request
 #: model:ir.model.fields,field_description:purchase_request.field_purchase_request__activity_state
 #: model:ir.model.fields,field_description:purchase_request.field_purchase_request_line__activity_state
 msgid "Activity State"
@@ -173,6 +154,7 @@ msgstr ""
 #. module: purchase_request
 #: model:ir.model.fields,field_description:purchase_request.field_purchase_request_allocation__allocated_product_qty
 #, fuzzy
+#| msgid "Quantity"
 msgid "Allocated Quantity"
 msgstr "Quantitat"
 
@@ -194,9 +176,9 @@ msgid "Approve"
 msgstr ""
 
 #. module: purchase_request
-#: model:ir.model.fields.selection,name:purchase_request.selection__purchase_request__state__approved
 #: model_terms:ir.ui.view,arch_db:purchase_request.purchase_request_line_search
 #: model_terms:ir.ui.view,arch_db:purchase_request.view_purchase_request_search
+#: selection:purchase.request,state:0
 msgid "Approved"
 msgstr "Aprovat"
 
@@ -252,6 +234,7 @@ msgstr ""
 #. module: purchase_request
 #: model_terms:ir.ui.view,arch_db:purchase_request.purchase_request_line_search
 #, fuzzy
+#| msgid "Quantity"
 msgid "Cancelled Quantity"
 msgstr "Quantitat"
 
@@ -350,9 +333,9 @@ msgid "Display Name"
 msgstr ""
 
 #. module: purchase_request
-#: model:ir.model.fields.selection,name:purchase_request.selection__purchase_request__state__done
 #: model_terms:ir.ui.view,arch_db:purchase_request.view_purchase_request_form
 #: model_terms:ir.ui.view,arch_db:purchase_request.view_purchase_request_search
+#: selection:purchase.request,state:0
 msgid "Done"
 msgstr ""
 
@@ -362,20 +345,20 @@ msgid "Downstream Moves"
 msgstr ""
 
 #. module: purchase_request
-#: model:ir.model.fields.selection,name:purchase_request.selection__purchase_request__state__draft
 #: model_terms:ir.ui.view,arch_db:purchase_request.purchase_request_line_search
 #: model_terms:ir.ui.view,arch_db:purchase_request.view_purchase_request_search
+#: selection:purchase.request,state:0
 msgid "Draft"
 msgstr "Esborrany"
 
 #. module: purchase_request
-#: code:addons/purchase_request/wizard/purchase_request_line_make_purchase_order.py:0
+#: code:addons/purchase_request/wizard/purchase_request_line_make_purchase_order.py:235
 #, python-format
 msgid "Enter a positive quantity."
 msgstr ""
 
 #. module: purchase_request
-#: code:addons/purchase_request/wizard/purchase_request_line_make_purchase_order.py:0
+#: code:addons/purchase_request/wizard/purchase_request_line_make_purchase_order.py:120
 #, python-format
 msgid "Enter a supplier."
 msgstr ""
@@ -414,7 +397,7 @@ msgid "Followers (Partners)"
 msgstr ""
 
 #. module: purchase_request
-#: code:addons/purchase_request/models/purchase_request_allocation.py:0
+#: code:addons/purchase_request/models/purchase_request_allocation.py:83
 #, python-format
 msgid ""
 "From last reception this quantity has been allocated to this purchase request"
@@ -447,30 +430,20 @@ msgid "ID"
 msgstr "ID"
 
 #. module: purchase_request
-#: model:ir.model.fields,field_description:purchase_request.field_purchase_request__activity_exception_icon
-#: model:ir.model.fields,field_description:purchase_request.field_purchase_request_line__activity_exception_icon
-msgid "Icon"
-msgstr ""
-
-#. module: purchase_request
-#: model:ir.model.fields,help:purchase_request.field_purchase_request__activity_exception_icon
-#: model:ir.model.fields,help:purchase_request.field_purchase_request_line__activity_exception_icon
-msgid "Icon to indicate an exception activity."
+#: model:ir.model.fields,help:purchase_request.field_purchase_request__message_unread
+#: model:ir.model.fields,help:purchase_request.field_purchase_request_line__message_unread
+msgid "If checked new messages require your attention."
 msgstr ""
 
 #. module: purchase_request
 #: model:ir.model.fields,help:purchase_request.field_purchase_request__message_needaction
-#: model:ir.model.fields,help:purchase_request.field_purchase_request__message_unread
 #: model:ir.model.fields,help:purchase_request.field_purchase_request_line__message_needaction
-#: model:ir.model.fields,help:purchase_request.field_purchase_request_line__message_unread
 msgid "If checked, new messages require your attention."
 msgstr ""
 
 #. module: purchase_request
 #: model:ir.model.fields,help:purchase_request.field_purchase_request__message_has_error
-#: model:ir.model.fields,help:purchase_request.field_purchase_request__message_has_sms_error
 #: model:ir.model.fields,help:purchase_request.field_purchase_request_line__message_has_error
-#: model:ir.model.fields,help:purchase_request.field_purchase_request_line__message_has_sms_error
 msgid "If checked, some messages have a delivery error."
 msgstr ""
 
@@ -549,6 +522,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:purchase_request.field_purchase_request__message_ids
 #: model:ir.model.fields,field_description:purchase_request.field_purchase_request_line__message_ids
 #, fuzzy
+#| msgid "Unread Messages"
 msgid "Messages"
 msgstr "Missatges sense llegir"
 
@@ -600,7 +574,7 @@ msgstr ""
 #. module: purchase_request
 #: model:ir.model.fields,field_description:purchase_request.field_purchase_request__message_has_error_counter
 #: model:ir.model.fields,field_description:purchase_request.field_purchase_request_line__message_has_error_counter
-msgid "Number of errors"
+msgid "Number of error"
 msgstr ""
 
 #. module: purchase_request
@@ -619,6 +593,7 @@ msgstr ""
 #: model:ir.model.fields,help:purchase_request.field_purchase_request__message_unread_counter
 #: model:ir.model.fields,help:purchase_request.field_purchase_request_line__message_unread_counter
 #, fuzzy
+#| msgid "Unread Messages"
 msgid "Number of unread messages"
 msgstr "Missatges sense llegir"
 
@@ -626,6 +601,7 @@ msgstr "Missatges sense llegir"
 #: model:ir.model.fields,field_description:purchase_request.field_purchase_request_allocation__open_product_qty
 #: model_terms:ir.ui.view,arch_db:purchase_request.purchase_request_line_search
 #, fuzzy
+#| msgid "Quantity"
 msgid "Open Quantity"
 msgstr "Quantitat"
 
@@ -635,7 +611,7 @@ msgid "Order Reference"
 msgstr ""
 
 #. module: purchase_request
-#: code:addons/purchase_request/models/purchase_order.py:0
+#: code:addons/purchase_request/models/purchase_order.py:16
 #, python-format
 msgid "Order confirmation %s for your Request %s"
 msgstr ""
@@ -646,8 +622,15 @@ msgid "Orderpoint"
 msgstr ""
 
 #. module: purchase_request
+#: selection:purchase.request,activity_state:0
+#: selection:purchase.request.line,activity_state:0
+msgid "Overdue"
+msgstr ""
+
+#. module: purchase_request
 #: model:ir.model.fields,field_description:purchase_request.field_purchase_request_line__description
 #, fuzzy
+#| msgid "Description"
 msgid "PR Description"
 msgstr "Descripció"
 
@@ -663,7 +646,13 @@ msgid "Picking Type"
 msgstr ""
 
 #. module: purchase_request
-#: code:addons/purchase_request/wizard/purchase_request_line_make_purchase_order.py:0
+#: selection:purchase.request,activity_state:0
+#: selection:purchase.request.line,activity_state:0
+msgid "Planned"
+msgstr ""
+
+#. module: purchase_request
+#: code:addons/purchase_request/wizard/purchase_request_line_make_purchase_order.py:163
 #, python-format
 msgid "Please select a product for all lines"
 msgstr ""
@@ -770,13 +759,13 @@ msgid "Purchase Request"
 msgstr ""
 
 #. module: purchase_request
-#: code:addons/purchase_request/models/purchase_order.py:0
+#: code:addons/purchase_request/models/purchase_order.py:66
 #, python-format
 msgid "Purchase Request %s has already been completed"
 msgstr ""
 
 #. module: purchase_request
-#: code:addons/purchase_request/wizard/purchase_request_line_make_purchase_order.py:0
+#: code:addons/purchase_request/wizard/purchase_request_line_make_purchase_order.py:48
 #, python-format
 msgid "Purchase Request %s is not approved"
 msgstr ""
@@ -791,7 +780,7 @@ msgstr ""
 
 #. module: purchase_request
 #: model_terms:ir.ui.view,arch_db:purchase_request.view_move_form
-#: model_terms:ir.ui.view,arch_db:purchase_request.view_picking_form
+#: model_terms:ir.ui.view,arch_db:purchase_request.view_move_picking_form
 msgid "Purchase Request Allocations"
 msgstr ""
 
@@ -819,7 +808,7 @@ msgid "Purchase Request Line count"
 msgstr ""
 
 #. module: purchase_request
-#: code:addons/purchase_request/models/purchase_order.py:0
+#: code:addons/purchase_request/models/purchase_order.py:119
 #: model:ir.actions.act_window,name:purchase_request.purchase_request_line_form_action
 #: model:ir.model.fields,field_description:purchase_request.field_purchase_order_line__purchase_request_lines
 #: model:ir.ui.menu,name:purchase_request.menu_purchase_request_line
@@ -929,12 +918,14 @@ msgstr "Quantitat"
 #. module: purchase_request
 #: model:ir.model.fields,help:purchase_request.field_purchase_request_line__qty_cancelled
 #, fuzzy
+#| msgid "Quantity"
 msgid "Quantity cancelled"
 msgstr "Quantitat"
 
 #. module: purchase_request
 #: model:ir.model.fields,help:purchase_request.field_purchase_request_line__qty_done
 #, fuzzy
+#| msgid "Quantity"
 msgid "Quantity completed"
 msgstr "Quantitat"
 
@@ -968,20 +959,20 @@ msgid "Quantity to purchase"
 msgstr ""
 
 #. module: purchase_request
-#: code:addons/purchase_request/wizard/purchase_request_line_make_purchase_order.py:0
+#: code:addons/purchase_request/wizard/purchase_request_line_make_purchase_order.py:303
 #, python-format
 msgid "RFQ"
 msgstr ""
 
 #. module: purchase_request
-#: code:addons/purchase_request/models/stock_move_line.py:0
-#: code:addons/purchase_request/models/stock_picking.py:0
+#: code:addons/purchase_request/models/stock_move_line.py:12
+#: code:addons/purchase_request/models/stock_picking.py:16
 #, python-format
 msgid "Receipt confirmation %s for your Request %s"
 msgstr ""
 
 #. module: purchase_request
-#: code:addons/purchase_request/models/stock_move_line.py:0
+#: code:addons/purchase_request/models/stock_move_line.py:31
 #, python-format
 msgid "Receipt confirmation for Request %s"
 msgstr ""
@@ -992,9 +983,9 @@ msgid "Reject"
 msgstr ""
 
 #. module: purchase_request
-#: model:ir.model.fields.selection,name:purchase_request.selection__purchase_request__state__rejected
 #: model_terms:ir.ui.view,arch_db:purchase_request.purchase_request_line_search
 #: model_terms:ir.ui.view,arch_db:purchase_request.view_purchase_request_search
+#: selection:purchase.request,state:0
 msgid "Rejected"
 msgstr ""
 
@@ -1054,6 +1045,7 @@ msgstr ""
 #. module: purchase_request
 #: model:ir.model.fields,field_description:purchase_request.field_purchase_request_allocation__requested_product_uom_qty
 #, fuzzy
+#| msgid "Quantity"
 msgid "Requested Quantity"
 msgstr "Quantitat"
 
@@ -1082,12 +1074,6 @@ msgid "Responsible User"
 msgstr ""
 
 #. module: purchase_request
-#: model:ir.model.fields,field_description:purchase_request.field_purchase_request__message_has_sms_error
-#: model:ir.model.fields,field_description:purchase_request.field_purchase_request_line__message_has_sms_error
-msgid "SMS Delivery error"
-msgstr ""
-
-#. module: purchase_request
 #: model_terms:ir.ui.view,arch_db:purchase_request.purchase_order_line_search_sub
 msgid "Search Purchase Order Line"
 msgstr ""
@@ -1104,7 +1090,7 @@ msgid "Service Purchase Order Line"
 msgstr ""
 
 #. module: purchase_request
-#: code:addons/purchase_request/models/purchase_order.py:0
+#: code:addons/purchase_request/models/purchase_order.py:180
 #, python-format
 msgid "Service confirmation for Request %s"
 msgstr ""
@@ -1183,14 +1169,14 @@ msgid "Supplier"
 msgstr ""
 
 #. module: purchase_request
-#: code:addons/purchase_request/models/stock_move.py:0
+#: code:addons/purchase_request/models/stock_move.py:85
 #, python-format
 msgid ""
 "The company of the purchase request must match with that of the location."
 msgstr ""
 
 #. module: purchase_request
-#: code:addons/purchase_request/models/purchase_order.py:0
+#: code:addons/purchase_request/models/purchase_order.py:19
 #, python-format
 msgid ""
 "The following requested items from Purchase Request %s have now been "
@@ -1198,7 +1184,7 @@ msgid ""
 msgstr ""
 
 #. module: purchase_request
-#: code:addons/purchase_request/models/stock_move_line.py:0
+#: code:addons/purchase_request/models/stock_move_line.py:15
 #, python-format
 msgid ""
 "The following requested items from Purchase Request %s have now been "
@@ -1206,7 +1192,7 @@ msgid ""
 msgstr ""
 
 #. module: purchase_request
-#: code:addons/purchase_request/models/stock_picking.py:0
+#: code:addons/purchase_request/models/stock_picking.py:19
 #, python-format
 msgid ""
 "The following requested items from Purchase Request %s have now been "
@@ -1214,7 +1200,7 @@ msgid ""
 msgstr ""
 
 #. module: purchase_request
-#: code:addons/purchase_request/models/stock_move_line.py:0
+#: code:addons/purchase_request/models/stock_move_line.py:34
 #, python-format
 msgid ""
 "The following requested items from Purchase Request %s requested by %s have "
@@ -1222,7 +1208,7 @@ msgid ""
 msgstr ""
 
 #. module: purchase_request
-#: code:addons/purchase_request/models/purchase_order.py:0
+#: code:addons/purchase_request/models/purchase_order.py:183
 #, python-format
 msgid ""
 "The following requested services from Purchase Request %s requested by %s "
@@ -1230,7 +1216,7 @@ msgid ""
 msgstr ""
 
 #. module: purchase_request
-#: code:addons/purchase_request/wizard/purchase_request_line_make_purchase_order.py:0
+#: code:addons/purchase_request/wizard/purchase_request_line_make_purchase_order.py:53
 #, python-format
 msgid "The purchase has already been completed."
 msgstr ""
@@ -1253,8 +1239,14 @@ msgid "To Approve Allowed"
 msgstr "Aprovat"
 
 #. module: purchase_request
-#: model:ir.model.fields.selection,name:purchase_request.selection__purchase_request__state__to_approve
+#: selection:purchase.request,state:0
 msgid "To be approved"
+msgstr ""
+
+#. module: purchase_request
+#: selection:purchase.request,activity_state:0
+#: selection:purchase.request.line,activity_state:0
+msgid "Today"
 msgstr ""
 
 #. module: purchase_request
@@ -1266,12 +1258,6 @@ msgstr ""
 #. module: purchase_request
 #: model:ir.model,name:purchase_request.model_stock_picking
 msgid "Transfer"
-msgstr ""
-
-#. module: purchase_request
-#: model:ir.model.fields,help:purchase_request.field_purchase_request__activity_exception_decoration
-#: model:ir.model.fields,help:purchase_request.field_purchase_request_line__activity_exception_decoration
-msgid "Type of the exception activity on record."
 msgstr ""
 
 #. module: purchase_request
@@ -1300,6 +1286,7 @@ msgstr "Missatges sense llegir"
 #: model:ir.model.fields,field_description:purchase_request.field_purchase_request__message_unread_counter
 #: model:ir.model.fields,field_description:purchase_request.field_purchase_request_line__message_unread_counter
 #, fuzzy
+#| msgid "Unread Messages"
 msgid "Unread Messages Counter"
 msgstr "Missatges sense llegir"
 
@@ -1319,6 +1306,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:purchase_request.field_purchase_request__website_message_ids
 #: model:ir.model.fields,field_description:purchase_request.field_purchase_request_line__website_message_ids
 #, fuzzy
+#| msgid "Unread Messages"
 msgid "Website Messages"
 msgstr "Missatges sense llegir"
 
@@ -1334,7 +1322,7 @@ msgid "Wizard"
 msgstr ""
 
 #. module: purchase_request
-#: code:addons/purchase_request/models/purchase_request_line.py:0
+#: code:addons/purchase_request/models/purchase_request_line.py:368
 #, python-format
 msgid ""
 "You can only delete a purchase request line if the purchase request is in "
@@ -1342,14 +1330,14 @@ msgid ""
 msgstr ""
 
 #. module: purchase_request
-#: code:addons/purchase_request/models/purchase_request.py:0
+#: code:addons/purchase_request/models/purchase_request.py:279
 #, python-format
 msgid ""
 "You can't request an approval for a purchase request which is empty. (%s)"
 msgstr ""
 
 #. module: purchase_request
-#: code:addons/purchase_request/wizard/purchase_request_line_make_purchase_order.py:0
+#: code:addons/purchase_request/wizard/purchase_request_line_make_purchase_order.py:81
 #, python-format
 msgid ""
 "You cannot create a single purchase order from purchase requests that have "
@@ -1357,31 +1345,31 @@ msgid ""
 msgstr ""
 
 #. module: purchase_request
-#: code:addons/purchase_request/models/purchase_request.py:0
+#: code:addons/purchase_request/models/purchase_request.py:238
 #, python-format
 msgid "You cannot delete a purchase request which is not draft."
 msgstr ""
 
 #. module: purchase_request
-#: code:addons/purchase_request/models/purchase_request_line.py:0
+#: code:addons/purchase_request/models/purchase_request_line.py:364
 #, python-format
 msgid "You cannot delete a record that refers to purchase lines!"
 msgstr ""
 
 #. module: purchase_request
-#: code:addons/purchase_request/wizard/purchase_request_line_make_purchase_order.py:0
+#: code:addons/purchase_request/wizard/purchase_request_line_make_purchase_order.py:68
 #, python-format
 msgid "You have to enter a Picking Type."
 msgstr ""
 
 #. module: purchase_request
-#: code:addons/purchase_request/wizard/purchase_request_line_make_purchase_order.py:0
+#: code:addons/purchase_request/wizard/purchase_request_line_make_purchase_order.py:72
 #, python-format
 msgid "You have to select lines from the same Picking Type."
 msgstr ""
 
 #. module: purchase_request
-#: code:addons/purchase_request/wizard/purchase_request_line_make_purchase_order.py:0
+#: code:addons/purchase_request/wizard/purchase_request_line_make_purchase_order.py:60
 #, python-format
 msgid "You have to select lines from the same company."
 msgstr ""
