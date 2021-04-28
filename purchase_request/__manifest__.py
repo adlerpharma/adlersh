@@ -1,20 +1,15 @@
-# Copyright 2018-2019 Eficent Business and IT Consulting Services S.L.
+# Copyright 2018-2019 ForgeFlow, S.L.
 # License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl-3.0).
 
 {
     "name": "Purchase Request",
-    "author": "Eficent, "
-              "Odoo Community Association (OCA)",
-    "version": "12.0.3.1.1",
+    "author": "ForgeFlow, Odoo Community Association (OCA)",
+    "version": "13.0.4.0.1",
     "summary": "Use this module to have notification of requirements of "
-               "materials and/or external services and keep track of such "
-               "requirements.",
+    "materials and/or external services and keep track of such "
+    "requirements.",
     "category": "Purchase Management",
-    "depends": [
-        "purchase",
-        "product",
-        "purchase_stock",
-    ],
+    "depends": ["purchase", "product", "purchase_stock"],
     "data": [
         "security/purchase_request.xml",
         "security/ir.model.access.csv",
@@ -28,11 +23,10 @@
         "views/product_template.xml",
         "views/purchase_order_view.xml",
         "views/stock_move_views.xml",
+        "views/stock_picking_views.xml",
     ],
-    'demo': [
-        "demo/purchase_request_demo.xml",
-    ],
-    "license": 'LGPL-3',
-    'installable': True,
-    'application': True,
+    "demo": ["demo/purchase_request_demo.xml"],
+    "license": "LGPL-3",
+    "installable": True,
+    "application": True,
 }
